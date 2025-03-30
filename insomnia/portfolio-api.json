@@ -37,7 +37,7 @@
       "created": 1683562800000,
       "name": "Base Environment",
       "data": {
-        "baseUrl": "http://localhost:3000"
+        "baseUrl": "http://localhost:3003"
       },
       "dataPropertyOrder": {
         "&": ["baseUrl"]

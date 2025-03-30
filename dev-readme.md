@@ -4,7 +4,7 @@ This document provides comprehensive information on all available API endpoints,
 
 ## Base URL
 
-All endpoints are relative to: `http://localhost:3000`
+All endpoints are relative to: `http://localhost:3003`
 
 ## API Endpoints
 

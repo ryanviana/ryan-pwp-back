@@ -71,14 +71,14 @@ npm run build
 npm run start:prod
 ```
 
-The application will be available at `http://localhost:3000` (or the port specified in the environment variables).
+The application will be available at `http://localhost:3003` (or the port specified in the environment variables).
 
 ## Environment Variables
 
 Create a `.env` file in the root directory with the following variables:
 
 ```
-PORT=3000
+PORT=3003
 MONGODB_URI=mongodb://localhost:27017/personal-website
 ```
 

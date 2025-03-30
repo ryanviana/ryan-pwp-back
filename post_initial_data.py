@@ -5,7 +5,7 @@ import time
 import sys
 
 # Base URL for the API
-BASE_URL = "http://localhost:3000"  # Assuming default NestJS port
+BASE_URL = "http://localhost:3003"  # Assuming default NestJS port
 
 # Increase timeout and retry settings for requests
 requests_timeout = 10

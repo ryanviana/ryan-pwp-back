@@ -4,7 +4,7 @@ import json
 import time
 
 # Base URL for the API
-BASE_URL = "http://localhost:3000"  # Assuming default NestJS port
+BASE_URL = "http://localhost:3003"  # Assuming default NestJS port
 
 # Test with a minimal blog post
 test_blog = {
