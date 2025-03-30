@@ -1,0 +1,715 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-05-08T12:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v8.6.0",
+  "resources": [
+    {
+      "_id": "req_root",
+      "parentId": "wrk_portfolio",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}",
+      "name": "Root",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562800000,
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_portfolio",
+      "parentId": null,
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "name": "Ryan Portfolio API",
+      "description": "API endpoints for Ryan's personal portfolio website",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_portfolio",
+      "parentId": "wrk_portfolio",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "name": "Base Environment",
+      "data": {
+        "baseUrl": "http://localhost:3000"
+      },
+      "dataPropertyOrder": {
+        "&": ["baseUrl"]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1683562800000,
+      "_type": "environment"
+    },
+    {
+      "_id": "fld_blog",
+      "parentId": "wrk_portfolio",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "name": "Blog",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1683562700000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_blog_getAll",
+      "parentId": "fld_blog",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/blog",
+      "name": "Get All Blog Posts",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562790000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_blog_getOne",
+      "parentId": "fld_blog",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/blog/my-first-blog-post",
+      "name": "Get Blog Post by Slug",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562780000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_blog_create",
+      "parentId": "fld_blog",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/blog",
+      "name": "Create Blog Post",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"slug\": \"my-new-blog-post\",\n  \"title\": \"My New Blog Post\",\n  \"date\": \"2024-05-08\",\n  \"excerpt\": \"This is a brief excerpt of my new blog post.\",\n  \"coverImage\": \"/images/blog/my-new-post.jpg\",\n  \"readingTime\": \"5 min read\",\n  \"tags\": [\"web development\", \"javascript\"],\n  \"content\": \"# My New Blog Post\\n\\nThis is the content of my new blog post written in markdown.\",\n  \"relatedPosts\": [\n    {\n      \"slug\": \"related-post-1\",\n      \"title\": \"Related Post 1\",\n      \"coverImage\": \"/images/blog/related-1.jpg\"\n    }\n  ]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683562770000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_blog_update",
+      "parentId": "fld_blog",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/blog/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Update Blog Post",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Updated Blog Post Title\",\n  \"excerpt\": \"This is an updated excerpt.\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683562760000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_blog_delete",
+      "parentId": "fld_blog",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/blog/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Delete Blog Post",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562750000,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_work",
+      "parentId": "wrk_portfolio",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "name": "Work Experience",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1683562600000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_work_getAll",
+      "parentId": "fld_work",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/work",
+      "name": "Get All Work Experiences",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562590000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_work_getOne",
+      "parentId": "fld_work",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/work/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Get Work Experience by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562580000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_work_create",
+      "parentId": "fld_work",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/work",
+      "name": "Create Work Experience",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Senior Software Engineer\",\n  \"company\": \"Tech Company\",\n  \"location\": \"San Francisco, CA\",\n  \"startDate\": \"2022-01\",\n  \"endDate\": \"2023-12\",\n  \"description\": [\n    \"Led the development of a new product feature that increased user engagement by 25%\",\n    \"Mentored junior developers and conducted code reviews\",\n    \"Implemented CI/CD pipeline that reduced deployment time by 40%\"\n  ]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683562570000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_work_update",
+      "parentId": "fld_work",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/work/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Update Work Experience",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Lead Software Engineer\",\n  \"description\": [\n    \"Led the development of a new product feature that increased user engagement by 25%\",\n    \"Mentored junior developers and conducted code reviews\",\n    \"Implemented CI/CD pipeline that reduced deployment time by 40%\",\n    \"Optimized database queries resulting in 30% faster page loads\"\n  ]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683562560000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_work_delete",
+      "parentId": "fld_work",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/work/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Delete Work Experience",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562550000,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_achievements",
+      "parentId": "wrk_portfolio",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "name": "Achievements",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1683562500000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_achievements_getAll",
+      "parentId": "fld_achievements",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/achievements",
+      "name": "Get All Achievements",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562490000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_achievements_getOne",
+      "parentId": "fld_achievements",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/achievements/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Get Achievement by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562480000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_achievements_create",
+      "parentId": "fld_achievements",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/achievements",
+      "name": "Create Achievement",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Best Developer Award\",\n  \"organization\": \"Tech Conference 2023\",\n  \"date\": \"2023-06\",\n  \"description\": \"Recognized for outstanding contributions to open source projects.\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683562470000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_achievements_update",
+      "parentId": "fld_achievements",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/achievements/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Update Achievement",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Outstanding Developer Award\",\n  \"description\": \"Recognized for exceptional contributions to open source projects and community building.\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683562460000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_achievements_delete",
+      "parentId": "fld_achievements",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/achievements/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Delete Achievement",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562450000,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_education",
+      "parentId": "wrk_portfolio",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "name": "Education",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1683562400000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_education_getAll",
+      "parentId": "fld_education",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/education",
+      "name": "Get All Education",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562390000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_education_getOne",
+      "parentId": "fld_education",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/education/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Get Education by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562380000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_education_create",
+      "parentId": "fld_education",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/education",
+      "name": "Create Education",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"degree\": \"Bachelor of Science in Computer Science\",\n  \"institution\": \"University of Technology\",\n  \"startYear\": \"2018\",\n  \"endYear\": \"2022\",\n  \"location\": \"San Francisco, CA\",\n  \"description\": \"Graduated with honors. Specialized in software engineering and machine learning.\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683562370000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_education_update",
+      "parentId": "fld_education",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/education/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Update Education",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"description\": \"Graduated summa cum laude. Specialized in software engineering, data structures, and machine learning.\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683562360000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_education_delete",
+      "parentId": "fld_education",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/experience/education/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Delete Education",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562350000,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_skills",
+      "parentId": "wrk_portfolio",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "name": "Skills",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1683562300000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_skills_getAll",
+      "parentId": "fld_skills",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/skills",
+      "name": "Get All Skill Categories",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562290000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_skills_getOne",
+      "parentId": "fld_skills",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/skills/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Get Skill Category by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562280000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_skills_create",
+      "parentId": "fld_skills",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/skills",
+      "name": "Create Skill Category",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Frontend Development\",\n  \"skills\": [\"React\", \"Angular\", \"Vue\", \"HTML5\", \"CSS3\", \"JavaScript\", \"TypeScript\"]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683562270000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_skills_update",
+      "parentId": "fld_skills",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/skills/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Update Skill Category",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"skills\": [\"React\", \"Angular\", \"Vue\", \"HTML5\", \"CSS3\", \"JavaScript\", \"TypeScript\", \"Next.js\", \"Svelte\"]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683562260000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_skills_delete",
+      "parentId": "fld_skills",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/skills/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Delete Skill Category",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562250000,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_projects",
+      "parentId": "wrk_portfolio",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "name": "Projects",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1683562200000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_projects_getAll",
+      "parentId": "fld_projects",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/projects",
+      "name": "Get All Projects",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562190000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_projects_getFeatured",
+      "parentId": "fld_projects",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/projects/featured",
+      "name": "Get Featured Projects",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562185000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_projects_getOne",
+      "parentId": "fld_projects",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/projects/portfolio-website",
+      "name": "Get Project by Slug",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562180000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_projects_create",
+      "parentId": "fld_projects",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/projects",
+      "name": "Create Project",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Portfolio Website\",\n  \"description\": \"My personal portfolio website built with Next.js and NestJS\",\n  \"fullDescription\": \"A complete portfolio website that showcases my projects, skills, and experience. Built with Next.js for the frontend and NestJS for the backend, with MongoDB as the database.\",\n  \"image\": \"/images/projects/portfolio.jpg\",\n  \"tags\": [\"Next.js\", \"NestJS\", \"MongoDB\", \"TypeScript\"],\n  \"slug\": \"portfolio-website\",\n  \"demoUrl\": \"https://portfolio.example.com\",\n  \"githubUrl\": \"https://github.com/username/portfolio\",\n  \"features\": [\"Responsive design\", \"Blog section\", \"Dynamic project showcase\", \"Contact form\"],\n  \"featured\": true\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683562170000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_projects_update",
+      "parentId": "fld_projects",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/projects/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Update Project",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"fullDescription\": \"A complete portfolio website that showcases my projects, skills, and experience. Built with Next.js for the frontend and NestJS for the backend, with MongoDB as the database. Features a responsive design and dark mode support.\",\n  \"features\": [\"Responsive design\", \"Blog section\", \"Dynamic project showcase\", \"Contact form\", \"Dark mode\", \"SEO optimized\"]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683562160000,
+      "_type": "request"
+    },
+    {
+      "_id": "req_projects_delete",
+      "parentId": "fld_projects",
+      "modified": 1683562800000,
+      "created": 1683562800000,
+      "url": "{{ _.baseUrl }}/projects/64e5f3c1f3b0d7a2b9c8e1d7",
+      "name": "Delete Project",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1683562150000,
+      "_type": "request"
+    }
+  ]
+}
